@@ -7,10 +7,10 @@ import './styles/GameContainer.style.css';
 
 function GameContainer(props) {
 	const [state, dispatch] = useReducer(reducer, initialState);
-	const { gameState } = state;
-	const showStartMenuScreen = gameState === 0;
-	const showMainGameScreen = gameState === 1;
-	const showGameOverScreen = gameState === 2;
+	const { currentScreen } = state;
+	const showStartMenuScreen = currentScreen === 0;
+	const showMainGameScreen = currentScreen === 1;
+	const showGameOverScreen = currentScreen === 2;
 	return (
 		<div className="game-container">
 			{showStartMenuScreen && <StartMenu dispatch={dispatch} />}
