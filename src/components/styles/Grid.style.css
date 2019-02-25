@@ -1,0 +1,43 @@
+.grid {
+	display: flex;
+  flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.grid__row {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.grid__basic-block {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.grid__basic-block__dot-and-bar {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.grid__basic-block__bar-and-box {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.grid__last-row-block {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.grid__last-column-block {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
