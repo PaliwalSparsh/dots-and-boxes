@@ -3,10 +3,21 @@ import PropTypes from "prop-types";
 import './styles/Box.style.css';
 
 function Box(props) {
-	const { color, text } = props;
-	const styles = {
-		backgroundColor: color,
-	};
+	const { type, text } = props;
+	const styles = {};
+	switch (type) {
+		case 0:
+			styles.backgroundColor = '#ffffff';
+			break;
+		case 1:
+			styles.backgroundColor = '#6f0765';
+			break;
+		case 2:
+			styles.backgroundColor = '#ffb228';
+			break;
+		default:
+			styles.display = 'none';
+	}
 	return (
 		<div className="box" style={styles}>
 			{text}
@@ -16,12 +27,13 @@ function Box(props) {
 
 Box.propTypes = {
   color: PropTypes.string,
-	text: PropTypes.string.isRequired
+	type: PropTypes.any.isRequired
 };
 
 // Same approach for defaultProps too
 Box.defaultProps = {
-  color: "tomato"
+  color: "tomato",
+	type: 0
 };
 
 export default Box;
