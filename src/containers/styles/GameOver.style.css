@@ -1,0 +1,73 @@
+.game-over {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+	max-height: 440px;
+	max-width: 500px;
+	margin: auto;
+	justify-content: center;
+}
+
+.game-over__game-completed {
+	text-align: center;
+	font-size: 36px;
+	font-weight: 800;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: auto;
+}
+
+.game-over__winner-name {
+	font-size: 24px;
+	font-weight: 800;
+	color: #ffb228;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	margin: auto;
+}
+
+.game-over__won {
+	font-size: 20px;
+	font-weight: 800;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: auto;
+}
+
+.game-over__main-menu-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: auto;
+}
+
+button {
+	width: auto;
+	border-radius: 5px;
+	padding: 9px 15px;
+	background: #cccccc;
+	border: 0;
+	font-size: 14px;
+	color: #ffffff;
+	outline: 0;
+}
+
+button:hover {
+	background: #ffb228;
+	color: black;
+	outline: 0;
+}
+
+button:active {
+	background: #e69400;
+	color: black;
+	outline: 0;
+}

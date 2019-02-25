@@ -32,9 +32,9 @@
 }
 
 .main-screen__grid {
-	width: 100%;
+	width: 90%;
   height: 60%;
-	margin: 5%;
+	margin: auto;
 	overflow-x: auto;
 	overflow-y: auto;
 	justify-content: center;

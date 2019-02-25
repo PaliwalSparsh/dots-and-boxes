@@ -1,6 +1,6 @@
 import React from 'react';
 import { restartGame } from '../actions';
-import './styles/StartMenu.style.css';
+import './styles/GameOver.style.css';
 
 function GameOver(props) {
 	const { state, dispatch } = props;
@@ -10,11 +10,17 @@ function GameOver(props) {
 		dispatch(restartGame());
 	}
 
+	// Marquee is added just for fun it creates a11y issues and is about to get deprecated.
 	return (
 		<div className="game-over">
-			<div>{hasPlayerOneWon ? 'PLAYER 1' : 'PLAYER 2'}</div>
-			<div>WON</div>
-			<button onClick={navigateToMainMenu}>GO TO MAIN MENU</button>
+			<div className="game-over__game-completed">GAME COMPLETED</div>
+			<div className="game-over__winner-name">
+				<marquee scrollamount={15}>{hasPlayerOneWon ? 'PLAYER 1' : 'PLAYER 2'}</marquee>
+			</div>
+			<div className="game-over__won">WON</div>
+			<div className="game-over__main-menu-button">
+				<button onClick={navigateToMainMenu}>MAIN MENU</button>
+			</div>
 		</div>
 	);
 }
