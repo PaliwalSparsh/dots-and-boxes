@@ -1,0 +1,11 @@
+.game-container {
+	min-width: 280px;
+  height: 100%;
+  border: 2px solid rgb(231, 231, 231);
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}

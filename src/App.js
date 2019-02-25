@@ -4,7 +4,7 @@ import GameContainer from './containers/GameContainer';
 class App extends Component {
 	render() {
 		return (
-			<div style={{ height: '500px' }}>
+			<div style={{ height: '400px' }}>
 				<GameContainer/>
 			</div>
 		);
