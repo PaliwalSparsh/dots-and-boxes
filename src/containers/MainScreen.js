@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Score from '../components/Score';
 import Grid from '../components/Grid';
+import { generateGrid } from '../actions';
 import './styles/MainScreen.style.css';
 
 function MainScreen(props) {
@@ -8,9 +9,7 @@ function MainScreen(props) {
 	const { rows, columns } = state;
 	useEffect(
 		() => {
-			dispatch({
-				type: 'GENERATE_GRID',
-			});
+			dispatch(generateGrid());
 		},
 		[rows, columns]
 	);

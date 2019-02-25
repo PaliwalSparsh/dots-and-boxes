@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { startGame } from '../actions';
 import './styles/StartMenu.style.css';
 
 function MainScreen(props) {
@@ -7,10 +8,7 @@ function MainScreen(props) {
 	const [columns, setColumns] = useState(3);
 
 	function handleStartGame() {
-		dispatch({
-			type: 'START_GAME',
-			payload: { rows: parseInt(rows), columns: parseInt(columns) },
-		});
+		dispatch(startGame(parseInt(rows), parseInt(columns)));
 	}
 
 	return (
