@@ -17,7 +17,7 @@ function renderGrid(state, dispatch) {
 function Grid(props) {
 	const { state, dispatch } = props;
 	const { rows } = state;
-	const width = rows * 80 + (rows + 1) * 10;
+	const width = rows * 60 + (rows + 1) * 10;
 	return (
 		<div className="grid" style={{ width: width }}>
 			{renderGrid(state, dispatch)}

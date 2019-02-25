@@ -1,4 +1,5 @@
 .grid {
+	margin: auto;
 	display: flex;
   flex-wrap: wrap;
 	flex-direction: row;
