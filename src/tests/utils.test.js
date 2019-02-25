@@ -1,6 +1,4 @@
-import { __test__ } from '../reducers';
-
-const { generateGrid, gridBoxObject } = __test__;
+import { generateGrid, gridBoxObject } from '../utils';
 
 it('should generate grid', () => {
 	const expectedOutput = [

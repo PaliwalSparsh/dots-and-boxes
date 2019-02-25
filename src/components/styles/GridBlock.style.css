@@ -1,0 +1,18 @@
+.grid__basic-block {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.grid__basic-block__dot-and-bar {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.grid__basic-block__bar-and-box {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}

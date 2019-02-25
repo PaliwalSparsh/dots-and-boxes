@@ -18,18 +18,24 @@ storiesOf('Dot', module).add('default', () => <Dot />);
 const storiesOfBar = storiesOf('Bar', module);
 storiesOfBar.addDecorator(withKnobs);
 storiesOfBar.add('default', () => {
-	const label = 'Color';
-	const defaultValue = 'tomato';
-	const colorValue = color(label, defaultValue);
-
 	const typeLabel = 'Type';
 	const typeOptions = {
+		0: 0,
+		1: 1,
+		2: 2,
+		'null': null
+	};
+	const typeDefaultValue = 0;
+	const typeValue = select(typeLabel, typeOptions, typeDefaultValue);
+
+	const orientationLabel = 'Orientation';
+	const orientationOptions = {
 		horizontal: 'horizontal',
 		vertical: 'vertical',
 	};
-	const typeDefaultValue = 'vertical';
-	const typeValue = select(typeLabel, typeOptions, typeDefaultValue);
-	return <Bar color={colorValue} type={typeValue} />;
+	const orientationDefaultValue = 'vertical';
+	const orientationValue = select(orientationLabel, orientationOptions, orientationDefaultValue);
+	return <Bar type={typeValue} orientation={orientationValue} />;
 });
 
 //---------------------------------------------------------------------------//
@@ -37,14 +43,20 @@ storiesOfBar.add('default', () => {
 const storiesOfBox = storiesOf('Box', module);
 storiesOfBox.addDecorator(withKnobs);
 storiesOfBox.add('default', () => {
-	const colorLabel = 'Color';
-	const colorDefaultValue = 'tomato';
-	const colorValue = color(colorLabel, colorDefaultValue);
+	const typeLabel = 'Type';
+	const typeOptions = {
+		0: 0,
+		1: 1,
+		2: 2,
+		'null': null
+	};
+	const typeDefaultValue = 0;
+	const typeValue = select(typeLabel, typeOptions, typeDefaultValue);
 
 	const textLabel = 'Text';
 	const textDefaultValue = 'P1';
 	const textValue = text(textLabel, textDefaultValue);
-	return <Box color={colorValue} text={textValue} />;
+	return <Box type={typeValue} text={textValue} />;
 });
 
 //---------------------------------------------------------------------------//
