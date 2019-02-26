@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, color, text, number, select } from '@storybook/addon-knobs';
+import { withKnobs, text, number, select } from '@storybook/addon-knobs';
 
 import Dot from '../components/Dot';
 import Bar from '../components/Bar';
 import Box from '../components/Box';
-import Grid from '../components/Grid';
+import GridBlock from '../components/GridBlock';
 import GameContainer from '../containers/GameContainer';
 
 //---------------------------------------------------------------------------//
@@ -23,7 +23,7 @@ storiesOfBar.add('default', () => {
 		0: 0,
 		1: 1,
 		2: 2,
-		'null': null
+		null: null,
 	};
 	const typeDefaultValue = 0;
 	const typeValue = select(typeLabel, typeOptions, typeDefaultValue);
@@ -48,7 +48,7 @@ storiesOfBox.add('default', () => {
 		0: 0,
 		1: 1,
 		2: 2,
-		'null': null
+		null: null,
 	};
 	const typeDefaultValue = 0;
 	const typeValue = select(typeLabel, typeOptions, typeDefaultValue);
@@ -61,17 +61,22 @@ storiesOfBox.add('default', () => {
 
 //---------------------------------------------------------------------------//
 
-const storiesOfGrid = storiesOf('Grid', module);
-storiesOfGrid.addDecorator(withKnobs);
-storiesOfGrid.add('default', () => {
-	const rowLabel = 'Rows';
-	const defaultRowValue = 3;
-	const rowValue = number(rowLabel, defaultRowValue);
+const storiesOfGridBlock = storiesOf('GridBlock', module);
+storiesOfGridBlock.addDecorator(withKnobs);
+storiesOfGridBlock.add('default', () => {
+	const typeOptions = {
+		0: 0,
+		1: 1,
+		2: 2,
+		null: null,
+	};
 
-	const colLabel = 'Columns';
-	const defaultColValue = 3;
-	const colValue = number(colLabel, defaultColValue);
-	return <Grid rows={rowValue} column={colValue} />;
+	const block = {
+		top: select('top', typeOptions, 1),
+		left: select('left', typeOptions, 1),
+		completedBy: select('completedBy', typeOptions, 1),
+	};
+	return <GridBlock block={block} dispatch={() => {}} />;
 });
 
 //---------------------------------------------------------------------------//
