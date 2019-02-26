@@ -10,7 +10,8 @@ function GameOver(props) {
 		dispatch(restartGame());
 	}
 
-	// Marquee is added just for fun it creates a11y issues and is about to get deprecated.
+	// Marquee is added just for fun, eslint disabled for same.
+	/* eslint-disable */
 	return (
 		<div className="game-over">
 			<div className="game-over__game-completed">GAME COMPLETED</div>
@@ -23,6 +24,7 @@ function GameOver(props) {
 			</div>
 		</div>
 	);
+	/* eslint-disable */
 }
 
 export default GameOver;
