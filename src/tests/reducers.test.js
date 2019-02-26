@@ -1,6 +1,6 @@
 import { initialState, reducers } from '../reducers';
 import Constants from '../constants';
-import { randomState_1x1, grid_1x1, randomState_2x2 } from './stubs';
+import { randomState_1x1, grid_1x1 } from './stubs';
 
 const INITIAL_STATE = {
 	currentScreen: 0,
@@ -49,12 +49,3 @@ it('should generate grid by responding to generate grid action', () => {
 	const expected = Object.assign({}, randomState_1x1, { grid: grid_1x1 });
 	expect(reducers(randomState_1x1, action)).toEqual(expected);
 });
-
-// it('should generate grid by responding to generate grid action', () => {
-// 	const action = {
-// 		type: Constants.UPDATE_GRID,
-// 		payload: { row: 0, column: 0, type: 'top' },
-// 	};
-// 	const expected = null;
-// 	expect(reducers(randomState_2x2, action)).toEqual(expected);
-// });

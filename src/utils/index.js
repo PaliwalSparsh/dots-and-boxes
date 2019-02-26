@@ -1,6 +1,9 @@
 export function logStates(state, action) {
-	console.log('State: ', state);
-	console.log('Action: ', action);
+	const isDevelopment = process.env.NODE_ENV === 'development';
+	if (isDevelopment) {
+		console.log('State: ', state);
+		console.log('Action: ', action);
+	}
 }
 
 export function gridBlockObject(row, column, left, top, completedBy) {
@@ -30,7 +33,7 @@ export function generateGrid(rows, columns) {
 		rowData.push(gridBlockObject(j, i, null, 0, null));
 	}
 	// last row and last column, just dot.
-	rowData.push(gridBlockObject(j, i, null, null, null))
+	rowData.push(gridBlockObject(j, i, null, null, null));
 	grid.push(rowData);
 	return grid;
 }
