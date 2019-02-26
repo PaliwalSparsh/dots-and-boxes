@@ -57,8 +57,8 @@ export function getUpdatedScoresWithCurrentTurnScore(scores, currentTurnScore, c
 	return updatedScores;
 }
 
-export function isGameCompleted(rows, columns, updatedScores) {
-	return rows * columns <= updatedScores[0] + updatedScores[1];
+export function isGameCompleted(rows, columns, scores) {
+	return rows * columns <= scores[0] + scores[1];
 }
 
 export function getUpdatedState(state, action) {

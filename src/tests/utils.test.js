@@ -3,6 +3,8 @@ import {
 	gridBlockObject,
 	deepCopyArrayWhileUpdatingRowValues,
 	togglePlayer,
+	getUpdatedScoresWithCurrentTurnScore,
+	isGameCompleted
 } from '../utils';
 import { grid_1x1 } from './stubs';
 
@@ -45,7 +47,26 @@ it('should generate deep copy of array while updating full object at defined pos
 	);
 });
 
-it('should return toggled player', () => {
+it('should return toggled player from 1 to 2', () => {
 	expect(togglePlayer(1)).toBe(2);
+});
+
+it('should return toggled player from 2 to 1', () => {
 	expect(togglePlayer(2)).toBe(1);
 });
+
+it('should return updateScores by increasing score of player 1', ()=>{
+	expect(getUpdatedScoresWithCurrentTurnScore([0,0], 2, 1)).toEqual([2,0]);
+})
+
+it('should return updateScores by increasing score of player 2', ()=>{
+	expect(getUpdatedScoresWithCurrentTurnScore([0,1], 2, 2)).toEqual([0,3]);
+})
+
+it('should check if the game is completed', ()=>{
+	expect(isGameCompleted(2,2,[1,3])).toBe(true);
+})
+
+it('should check if the game is not completed', ()=>{
+	expect(isGameCompleted(2,2,[1,2])).toBe(false);
+})
