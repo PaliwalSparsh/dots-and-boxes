@@ -8,7 +8,13 @@ function MainScreen(props) {
 	const [columns, setColumns] = useState(3);
 	const isSmallScreen = window.innerWidth < 480;
 	function handleStartGame() {
-		dispatch(startGame(parseInt(rows), parseInt(columns)));
+		const rowsInt = parseInt(rows);
+		const columnsInt = parseInt(columns);
+		if (rowsInt > 11 || columnsInt > 11) {
+			alert('Rows or columns cannot be greater than 10.');
+			return;
+		}
+		dispatch(startGame(rowsInt, columnsInt));
 	}
 
 	return (
