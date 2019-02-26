@@ -2,7 +2,10 @@ import React, { useEffect } from 'react';
 import Score from '../components/Score';
 import Grid from '../components/Grid';
 import { generateGrid, restartGame } from '../actions';
+import Constants from '../constants';
 import './styles/MainScreen.style.css';
+
+const { PRIMARY_BAR_COLOR, SECONDARY_BAR_COLOR } = Constants.colors;
 
 function MainScreen(props) {
 	const { state, dispatch } = props;
@@ -16,8 +19,8 @@ function MainScreen(props) {
 	return (
 		<div className="main-screen">
 			<div className="main-screen__scores">
-				<Score title="Player 1" color="#4c0045" value={state.scores[0]} />
-				<Score title="Player 2" color="#bd512f" value={state.scores[1]} />
+				<Score title="Player 1" color={PRIMARY_BAR_COLOR} value={state.scores[0]} />
+				<Score title="Player 2" color={SECONDARY_BAR_COLOR} value={state.scores[1]} />
 			</div>
 			<div className="main-screen__grid">
 				<Grid state={state} dispatch={dispatch} />

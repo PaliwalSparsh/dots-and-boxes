@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Constants from '../constants';
 import './styles/Bar.style.css';
+
+const { DEFAULT_BAR_COLOR, PRIMARY_BAR_COLOR, SECONDARY_BAR_COLOR } = Constants.colors;
 
 function Bar(props) {
 	const { orientation, type } = props;
 	const styles = {};
 	switch (type) {
 		case 0:
-			styles.backgroundColor = '#d0d0d0';
+			styles.backgroundColor = DEFAULT_BAR_COLOR;
 			break;
 		case 1:
-			styles.backgroundColor = '#4c0045';
+			styles.backgroundColor = PRIMARY_BAR_COLOR;
 			break;
 		case 2:
-			styles.backgroundColor = '#bd512f';
+			styles.backgroundColor = SECONDARY_BAR_COLOR;
 			break;
 		default:
 			styles.display = 'none';

@@ -3,8 +3,14 @@ const Constants = {
 	GENERATE_GRID: 'GENERATE_GRID',
 	UPDATE_GRID: 'UPDATE_GRID',
 	RESTART_GAME: 'RESTART_GAME',
-
-	
+	colors: {
+		DEFAULT_BAR_COLOR: '#d0d0d0',
+		PRIMARY_BAR_COLOR: '#4c0045',
+		SECONDARY_BAR_COLOR: '#bd512f',
+		DEFAULT_BOX_COLOR: '#ffffff',
+		PRIMARY_BOX_COLOR: '#6f0765',
+		SECONDARY_BOX_COLOR: '#ffb228',
+	},
 };
 
 export default Constants;
