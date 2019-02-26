@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { startGame } from '../actions';
 import './styles/StartMenu.style.css';
+import Icon from '../mainMenu.png';
 
 function MainScreen(props) {
 	const { dispatch } = props;
@@ -20,7 +21,8 @@ function MainScreen(props) {
 
 	return (
 		<div className="start-menu">
-			<div className="start-menu__game-name">
+			<div className="start-menu__header">
+				<img className="start-menu__game-logo" src={Icon} alt="game icon." />
 				<div>dots-and-boxes</div>
 			</div>
 			<div className="start-menu__input">

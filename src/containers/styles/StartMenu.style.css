@@ -9,13 +9,18 @@
 	justify-content: center;
 }
 
-.start-menu__game-name {
+.start-menu__header {
+	flex-direction: column;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 	height: 40%;
 	font-size: 24px;
 	font-weight: 800;
+}
+
+.start-menu__game-logo {
+	width: 30%;
 }
 
 .start-menu__input {
