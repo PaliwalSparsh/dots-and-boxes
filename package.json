@@ -28,6 +28,8 @@
     "@storybook/addon-actions": "^4.1.13",
     "@storybook/addon-knobs": "^4.1.13",
     "@storybook/addon-links": "^4.1.13",
-    "@storybook/react": "^4.1.13"
+    "@storybook/addon-storyshots": "^4.1.13",
+    "@storybook/react": "^4.1.13",
+    "react-test-renderer": "^16.8.3"
   }
 }

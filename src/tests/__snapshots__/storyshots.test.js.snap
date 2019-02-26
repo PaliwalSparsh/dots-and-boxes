@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Bar default 1`] = `
+<div
+  className="vertical-bar"
+  style={
+    Object {
+      "backgroundColor": "#d0d0d0",
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Box default 1`] = `
+<div
+  className="box"
+  style={
+    Object {
+      "backgroundColor": "#ffffff",
+    }
+  }
+>
+  P1
+</div>
+`;
+
+exports[`Storyshots Dot default 1`] = `
+<div
+  className="dot"
+/>
+`;
+
+exports[`Storyshots GameContainer default 1`] = `
+<div
+  className="game-container"
+>
+  <div
+    className="start-menu"
+  >
+    <div
+      className="start-menu__header"
+    >
+      <img
+        alt="game icon."
+        className="start-menu__game-logo"
+        src="mainMenu.png"
+      />
+      <div>
+        dots-and-boxes
+      </div>
+    </div>
+    <div
+      className="start-menu__input"
+    >
+      <label>
+        Rows
+      </label>
+      <input
+        onChange={[Function]}
+        type="input"
+        value={3}
+      />
+    </div>
+    <div
+      className="start-menu__input"
+    >
+      <label>
+        Columns
+      </label>
+      <input
+        onChange={[Function]}
+        type="input"
+        value={3}
+      />
+    </div>
+    <div
+      className="start-menu__button"
+    >
+      <button
+        onClick={[Function]}
+        onTouchStart={[Function]}
+      >
+        START GAME
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots GridBlock default 1`] = `
+<div
+  className="grid__basic-block"
+>
+  <div
+    className="grid__basic-block__dot-and-bar"
+  >
+    <div
+      className="dot"
+    />
+    <div
+      className="horizontal-bar"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#4c0045",
+        }
+      }
+    />
+  </div>
+  <div
+    className="grid__basic-block__bar-and-box"
+  >
+    <div
+      className="vertical-bar"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#4c0045",
+        }
+      }
+    />
+    <div
+      className="box"
+      style={
+        Object {
+          "backgroundColor": "#6f0765",
+        }
+      }
+    />
+  </div>
+</div>
+`;
