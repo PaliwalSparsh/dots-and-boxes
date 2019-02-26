@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/PaliwalSparsh/dots-and-boxes.svg?branch=master)](https://travis-ci.org/PaliwalSparsh/dots-and-boxes)
+
 # Dots-and-boxes
 
 ## Requirements
@@ -15,6 +17,7 @@ These GridBlocks put side-by-side create rows and columns for Grid. When a user 
 2. Storybook
 3. create-react-app
 3. Netlify for deployment - **BONUS POINTS** :smile:
+4. Travis CI for continuous integration.
 
 ## Getting started
 1. `npm start` To run the app in the development mode . Browse to [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.

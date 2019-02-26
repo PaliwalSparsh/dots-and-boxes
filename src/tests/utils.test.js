@@ -1,4 +1,4 @@
-import { generateGrid, gridBoxObject } from '../utils';
+import { generateGrid, gridBlockObject } from '../utils';
 
 it('should generate grid', () => {
 	const expectedOutput = [
@@ -8,17 +8,17 @@ it('should generate grid', () => {
 				row: 1,
 				column: 0,
 				left: 0,
-				top: undefined,
-				completedBy: undefined,
+				top: null,
+				completedBy: null,
 			},
 		],
 		[
 			{
 				row: 0,
 				column: 1,
-				left: undefined,
+				left: null,
 				top: 0,
-				completedBy: undefined,
+				completedBy: null,
 			},
 		],
 	];
@@ -29,5 +29,5 @@ it('should generate grid', () => {
 it('should generate grid object', () => {
 	const expectedOutput = { row: 0, column: 0, left: 1, top: 0, completedBy: 1 };
 
-	expect(gridBoxObject(0, 0, 1, 0, 1)).toEqual(expectedOutput);
+	expect(gridBlockObject(0, 0, 1, 0, 1)).toEqual(expectedOutput);
 });
