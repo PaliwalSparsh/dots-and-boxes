@@ -1,27 +1,8 @@
 import { generateGrid, gridBlockObject } from '../utils';
+import { grid_1x1 } from './stubs';
 
 it('should generate grid', () => {
-	const expectedOutput = [
-		[
-			{ row: 0, column: 0, left: 0, top: 0, completedBy: 0 },
-			{
-				row: 1,
-				column: 0,
-				left: 0,
-				top: null,
-				completedBy: null,
-			},
-		],
-		[
-			{
-				row: 0,
-				column: 1,
-				left: null,
-				top: 0,
-				completedBy: null,
-			},
-		],
-	];
+	const expectedOutput = grid_1x1;
 	expect(generateGrid(1, 1)).toEqual(expectedOutput);
 });
 

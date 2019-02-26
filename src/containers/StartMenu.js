@@ -7,6 +7,7 @@ function MainScreen(props) {
 	const [rows, setRows] = useState(3);
 	const [columns, setColumns] = useState(3);
 	const isSmallScreen = window.innerWidth < 480;
+
 	function handleStartGame() {
 		const rowsInt = parseInt(rows);
 		const columnsInt = parseInt(columns);

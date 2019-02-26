@@ -5,10 +5,10 @@ import './styles/Grid.style.css';
 
 function renderGrid(state, dispatch) {
 	const { grid } = state;
-	return grid.map(row => {
+	return grid.map((row, rowIndex) => {
 		return (
-			<div className="grid__row">
-				{row.map(block => <GridBlock block={block} dispatch={dispatch} />)}
+			<div key={`${rowIndex}`} className="grid__row">
+				{row.map((block, blockIndex) => <GridBlock key={`${rowIndex}-${blockIndex}`} block={block} dispatch={dispatch} />)}
 			</div>
 		);
 	});

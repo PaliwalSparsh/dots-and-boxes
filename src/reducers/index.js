@@ -1,4 +1,4 @@
-import { generateGrid, getUpdatedState } from '../utils';
+import { generateGrid, getUpdatedState, logStates } from '../utils';
 import Constants from '../constants';
 
 // Screens => 0: MenuScreen, 1: GameScreen, 2: GameOver
@@ -14,6 +14,7 @@ export const initialState = {
 };
 
 export function reducers(state, action) {
+	logStates(state, action);
 	switch (action.type) {
 		case Constants.START_GAME:
 			return Object.assign({}, state, action.payload);

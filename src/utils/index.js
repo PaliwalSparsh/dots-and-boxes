@@ -1,3 +1,8 @@
+export function logStates(state, action) {
+	console.log('State: ', state);
+	console.log('Action: ', action);
+}
+
 export function gridBlockObject(row, column, left, top, completedBy) {
 	return {
 		row,
@@ -19,10 +24,13 @@ export function generateGrid(rows, columns) {
 		}
 		grid.push(rowData);
 	}
+	// last row
 	rowData = [];
 	for (j = 0; j < rows; j++) {
 		rowData.push(gridBlockObject(j, i, null, 0, null));
 	}
+	// last row and last column, just dot.
+	rowData.push(gridBlockObject(j, i, null, null, null))
 	grid.push(rowData);
 	return grid;
 }

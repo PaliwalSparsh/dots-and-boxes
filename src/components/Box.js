@@ -30,7 +30,7 @@ function Box(props) {
 
 Box.propTypes = {
 	color: PropTypes.string,
-	type: PropTypes.any.isRequired,
+	type: PropTypes.any,
 };
 
 Box.defaultProps = {
