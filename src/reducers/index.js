@@ -1,8 +1,8 @@
 import { generateGrid, getUpdatedState } from '../utils';
 import Constants from '../constants';
 
-//Screens => 0: MenuScreen, 1: GameScreen, 2: GameOver
-//Players => 1: Player1, 2: Player2
+// Screens => 0: MenuScreen, 1: GameScreen, 2: GameOver
+// Players => 1: Player1, 2: Player2
 
 export const initialState = {
 	currentScreen: 0,
@@ -13,14 +13,13 @@ export const initialState = {
 	grid: [],
 };
 
-export function reducer(state, action) {
+export function reducers(state, action) {
 	switch (action.type) {
 		case Constants.START_GAME:
-			return Object.assign({}, state, action.payload, { currentScreen: 1 });
+			return Object.assign({}, state, action.payload);
 		case Constants.GENERATE_GRID:
-			return Object.assign({}, state, {
-				grid: generateGrid(state.rows, state.columns),
-			});
+			const grid = generateGrid(state.rows, state.columns);
+			return Object.assign({}, state, { grid });
 		case Constants.UPDATE_GRID:
 			return getUpdatedState(state, action);
 		case Constants.RESTART_GAME:

@@ -33,7 +33,6 @@ Box.propTypes = {
 	type: PropTypes.any.isRequired,
 };
 
-// Same approach for defaultProps too
 Box.defaultProps = {
 	color: 'tomato',
 	type: 0,

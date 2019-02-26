@@ -10,8 +10,8 @@ function MainScreen(props) {
 	function handleStartGame() {
 		const rowsInt = parseInt(rows);
 		const columnsInt = parseInt(columns);
-		if (rowsInt > 11 || columnsInt > 11) {
-			alert('Rows or columns cannot be greater than 10.');
+		if (rowsInt <= 0 || rowsInt > 10 || columnsInt <= 0 || columnsInt > 10) {
+			alert('Rows or columns should be between 1 and 10.');
 			return;
 		}
 		dispatch(startGame(rowsInt, columnsInt));
