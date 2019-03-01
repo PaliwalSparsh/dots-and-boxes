@@ -73,21 +73,21 @@ button {
 	width: auto;
 	border-radius: 5px;
 	padding: 9px 15px;
-	background: #cccccc;
+	background: #ffb228;
 	border: 0;
 	font-size: 14px;
-	color: #ffffff;
+	color: black;
 	outline: 0;
 }
 
 button:hover {
-	background: #ffb228;
+	background: #e69400;
 	color: black;
 	outline: 0;
 }
 
 button:active {
-	background: #e69400;
+	background: #d18600;
 	color: black;
 	outline: 0;
 }
