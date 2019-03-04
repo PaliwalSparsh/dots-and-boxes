@@ -5,8 +5,8 @@ import './App.global.css';
 class App extends Component {
 	render() {
 		return (
-			<div style={{ height: '400px' }}>
-				<GameContainer/>
+			<div className="app">
+				<GameContainer />
 			</div>
 		);
 	}
