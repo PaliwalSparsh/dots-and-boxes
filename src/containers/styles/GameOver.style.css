@@ -48,27 +48,3 @@
 	width: 100%;
 	margin: auto;
 }
-
-button {
-	width: auto;
-	border-radius: 5px;
-	padding: 9px 15px;
-	background: #ffb228;
-	border: 0;
-	font-size: 14px;
-	color: black;
-	outline: 0;
-}
-
-button:hover {
-	background: #e69400;
-	color: black;
-	outline: 0;
-}
-
-button:active {
-	background: #d18600;
-	color: black;
-	outline: 0;
-}
-
