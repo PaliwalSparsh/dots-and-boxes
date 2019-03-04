@@ -2,7 +2,7 @@
 
 # Dots-and-boxes
 
-**Game demo link**: [https://5c752590f1421772021d912d--dots-and-boxes.netlify.com/](https://5c752590f1421772021d912d--dots-and-boxes.netlify.com/)
+**Game demo link**: [https://dots-and-boxes.netlify.com/](https://dots-and-boxes.netlify.com/)
 
 **Storybook link**: [https://5c7525e30b10e7d8d0526fa5--dots-and-boxes.netlify.com](https://5c7525e30b10e7d8d0526fa5--dots-and-boxes.netlify.com)
 
